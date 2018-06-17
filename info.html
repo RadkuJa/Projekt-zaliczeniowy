@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>Mountain traveler - wyrusz na szlak razem z nami!</title>
+	
+	<meta name="description" content="Serwis o górach, wycieczkach górskich. Zapisz się na wycieczkę" />
+	<meta name="keywords" content="góry, wycieczki górskie, tatry, bieszczady, przewodnik" />
+
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet"> 
+
+	<link href="css/fontello.css" rel="stylesheet" type="text/css"/>
+	
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="header">
+			<div class="logo">
+				<a href="index.html"><img src="mountain.png" style="float:left"/></a><br>
+				<span style="color:#4570ce">Mountain</span> traveler</div>
+				<div style="clear:both"></div>
+		</div>
+		<div class="nav">
+			<ol>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="info.html">Strona informacyjna</a></li>
+				<li><a href="gallery.html">Galeria</a></li>
+				<li><a href="contact.html">Kontakt</a></li>
+			</ol>
+
+		</div>
+
+<!-- INFO PAGE + DROPDOWN BAR -->
+		<div class="content">
+
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque obcaecati soluta aut minima exercitationem! Necessitatibus omnis error eligendi dicta atque voluptatem! Dolores quod esse cumque ea deserunt mollitia? Reprehenderit, officiis.</p>
+
+				<div class="dropdown">
+						<button onclick="myFunction()" class="dropbtn">Materiały do pobrania</button>
+						<div id="myDropdown" class="dropdown-content">
+						  <a href="#">Filmy</a>
+						  <a href="#">Zdjęcia</a>
+						  <a href="#">Publikacje</a>
+						</div>
+					  </div> 
+
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque obcaecati soluta aut minima exercitationem! Necessitatibus omnis error eligendi dicta atque voluptatem! Dolores quod esse cumque ea deserunt mollitia? Reprehenderit, officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aperiam omnis exercitationem, possimus porro repellendus totam, quaerat est libero eaque rerum suscipit quos quae provident, quisquam magnam dignissimos nulla voluptate!</p>
+
+
+		</div>
+
+<!-- SOCIAL ICONS -->
+<div class="socials">
+		<div class="socialdivs">
+			<div class="fb">
+				<a href="https://facebook.com" class="tilelink" target="_blank"><i class="icon-facebook"></i></a>
+			</div>
+			<div class="yt">
+				<a href="https://youtube.com" class="tilelink" target="_blank"><i class="icon-youtube"></i></a>
+			</div>
+			<div class="tw">
+				<a href="https://twitter.com" class="tilelink" target="_blank"><i class="icon-twitter"></i></a>
+			</div>
+			<div class="gplus">
+				<a href="https://plus.google.com" class="tilelink" target="_blank"><i class="icon-gplus"></i></a>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+
+		<div class="footer">Projekt WSB &copy; 2018 Dzięki za wizytę!</div>
+
+	</div>
+	
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="main.js"></script>
+	<script src="jquery-1.11.3.min.js"></script>
+
+<!-- STICKY MENU -->
+<script>
+
+	$(document).ready(function() {
+	var NavY = $('.nav').offset().top;
+	 
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+		  
+	if (ScrollY > NavY) { 
+		$('.nav').addClass('sticky');
+	} else {
+		$('.nav').removeClass('sticky'); 
+	}
+	};
+	 
+	stickyNav();
+	 
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+	
+</script>
+
+<!-- DROPDOWN BUTTON -->
+<script>
+	function myFunction() {
+		document.getElementById("myDropdown").classList.toggle("show");
+	}
+	
+
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+	
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+		  var openDropdown = dropdowns[i];
+		  if (openDropdown.classList.contains('show')) {
+			openDropdown.classList.remove('show');
+		  }
+		}
+	  }
+	}
+	</script>
+
+</body>
+</html>

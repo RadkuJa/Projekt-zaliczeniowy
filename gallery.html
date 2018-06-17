@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>Mountain traveler - wyrusz na szlak razem z nami!</title>
+	
+	<meta name="description" content="Serwis o górach, wycieczkach górskich. Zapisz się na wycieczkę" />
+	<meta name="keywords" content="góry, wycieczki górskie, tatry, bieszczady, przewodnik" />
+
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet"> 
+
+	<link href="css/fontello.css" rel="stylesheet" type="text/css"/>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		body {
+			margin: 0;
+		}
+		
+		.column {
+			float: left;
+			width: 25%;
+			padding: 10px;
+		}
+		
+		.column img {
+			opacity: 0.8; 
+			cursor: pointer; 
+		}
+		
+		.column img:hover {
+			opacity: 1;
+		}
+		
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		
+		.container {
+			position: relative;
+			display: none;
+		}
+		
+		#imgtext {
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+			color: white;
+			font-size: 20px;
+		}
+		
+		.closebtn {
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			color: white;
+			font-size: 35px;
+			cursor: pointer;
+		}
+		</style>
+	
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="header">
+			<div class="logo">
+				<a href="index.html"><img src="mountain.png" style="float:left"/></a><br>
+				<span style="color:#4570ce">Mountain</span> traveler</div>
+				<div style="clear:both"></div>
+		</div>
+		<div class="nav">
+			<ol>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="info.html">Strona informacyjna</a></li>
+				<li><a href="gallery.html">Galeria</a></li>
+				<li><a href="contact.html">Kontakt</a></li>
+			</ol>
+
+		</div>
+
+<!-- GALLERY PAGE + MINI PHOTOS -->
+		<div class="content">
+
+			<div style="text-align:center">
+				<h2>Galeria zdjęć z wypraw</h2>
+				<p>Kliknij aby powiększyć</p>
+			  </div>
+			  
+			  <div class="row">
+				<div class="column">
+				  <img src="galeria1.jpg" alt="Tatry" style="width:100%" onclick="myFunction(this);">
+				</div>
+				<div class="column">
+				  <img src="galeria2.jpg" alt="Pieniny" style="width:100%" onclick="myFunction(this);">
+				</div>
+				<div class="column">
+				  <img src="galeria3.jpg" alt="Bieszczady" style="width:100%" onclick="myFunction(this);">
+				</div>
+				<div class="column">
+				  <img src="galeria4.jpg" alt="Beskidy" style="width:100%" onclick="myFunction(this);">
+				</div>
+			  </div>
+			  
+			  <div class="container">
+				<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+				<img id="expandedImg" style="width:100%">
+				<div id="imgtext"></div>
+			  </div><br>
+
+
+		</div>
+
+<!-- SOCIAL ICONS -->
+<div class="socials">
+		<div class="socialdivs">
+			<div class="fb">
+				<a href="https://facebook.com" class="tilelink" target="_blank"><i class="icon-facebook"></i></a>
+			</div>
+			<div class="yt">
+				<a href="https://youtube.com" class="tilelink" target="_blank"><i class="icon-youtube"></i></a>
+			</div>
+			<div class="tw">
+				<a href="https://twitter.com" class="tilelink" target="_blank"><i class="icon-twitter"></i></a>
+			</div>
+			<div class="gplus">
+				<a href="https://plus.google.com" class="tilelink" target="_blank"><i class="icon-gplus"></i></a>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+
+		<div class="footer">Projekt WSB &copy; 2018 Dzięki za wizytę!</div>
+
+	</div>
+	
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="main.js"></script>
+	<script src="jquery-1.11.3.min.js"></script>
+
+<!-- STICKY MENU -->
+<script>
+
+	$(document).ready(function() {
+	var NavY = $('.nav').offset().top;
+	 
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+		  
+	if (ScrollY > NavY) { 
+		$('.nav').addClass('sticky');
+	} else {
+		$('.nav').removeClass('sticky'); 
+	}
+	};
+	 
+	stickyNav();
+	 
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+	
+</script>
+
+
+</body>
+</html>
